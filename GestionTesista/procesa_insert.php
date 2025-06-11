@@ -20,5 +20,5 @@ if($con->query($sql) === true){
     header("Location: ../GestionTesista.php");
 }else{
     echo "no se pudo ingresar los datos";
-    //header("Location: ./formulario.php?success=true");
+    header("Location: ./Ingresar.php");
 }

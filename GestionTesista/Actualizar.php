@@ -6,7 +6,7 @@ $apellido = $_POST["apellido"];
 $nombre = $_POST["nombre"];
 $dni = $_POST["dni"];
 $EP= $_POST["Escuela_Profecional"];
-$sql = "UPDATE persona SET 
+$sql = "UPDATE tesista SET 
             Apellido = '$apellido', 
             Nombre = '$nombre', 
             DNI = '$dni', 
@@ -21,7 +21,7 @@ if ($con->query($sql) === true) {
     header("Location: ../GestionTesista.php");
 } else {
     echo "Error al actualizar: " . $con->error;
-    echo "no se pudo ingresar los datos";
-    header("Location: ./Ingresar.php");
+    echo "no se pudo actualizar los datos";
+    header("Location: ./editar?id=$id.php");
 
 }

@@ -10,12 +10,13 @@ $id = $_GET["id"];
 $objConexion = new Conexion();
 $con = $objConexion->getConexion();
 
-$sql = "SELECT * FROM tesita WHERE id = $id";
+$sql = "SELECT * FROM tesista WHERE id = $id";
 $resultado = $con->query($sql);
 
 if ($resultado->num_rows == 0) {
     echo "Persona no encontrada.";
-    exit();
+    echo "Error al actualizar: " . $con->error;
+    //exit();
 }
 
 
@@ -50,11 +51,11 @@ for ($i=0; $i < 3; $i++) {
 <body>
     <h1>Editar Testa</h1>
     
-    <form action="procesa_insert.php" method="POST"> <br>
+    <form action="Actualizar.php" method="POST"> <br>
     <input type="hidden" name="id" value="<?= $fila['id'] ?>">
-    <input name="apellido" value="<?= $fila['apellidos'] ?>" placeholder="Apellido"><br>
-    <input name="nombre" value="<?= $fila['nombres'] ?>" placeholder="Nombre"><br>
-    <input name="dni" value="<?= $fila['dni'] ?>" placeholder="DNI"><br>
+    <input name="apellido" value="<?= $fila['Apellido'] ?>" placeholder="Apellido"><br>
+    <input name="nombre" value="<?= $fila['Nombre'] ?>" placeholder="Nombre"><br>
+    <input name="dni" value="<?= $fila['DNI'] ?>" placeholder="DNI"><br>
     <label for="Escuela_Profecional">Escuela Profecional:</label><br>
     <select name="Escuela_Profecional" id="Escuela_Profecional" inputmode="$_POST">
             <option namme="Escuela_Profecional" value="<?= $EPdelTesista ?>">Ing. Sistemas</option>
