@@ -16,7 +16,7 @@
     <select name="Tesista" id="Tesista" inputmode="$_POST">
             <option value="">Selecciona una opción</option>
             <?php
-            require_once "Conexion.php";
+            require_once "../Conexion.php";
             $sql = "SELECT * FROM  Tesista AS te  WHERE te.estado = 1 ORDER BY te.Apellido";
             $objConexion = new Conexion();
             $con = $objConexion->getConexion();
