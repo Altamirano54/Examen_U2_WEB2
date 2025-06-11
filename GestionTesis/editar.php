@@ -23,3 +23,4 @@ if ($resultado->num_rows == 0) {
 
 
 $fila = $resultado->fetch_assoc();
+?>
