@@ -31,7 +31,7 @@
                     echo "<td>". $fila['Escuela_Profecional']. "</td>";
                     echo "<td>
                             <a href='GestionTesista/editar.php?id={$fila['id']}'>Editar</a>
-                            <a href='eliminar.php?id={$fila['id']}'>Eliminar</a>
+                            <a href='GestionTesista/eliminar.php?id={$fila['id']}'>Eliminar</a>
                           </td>";
                     echo "</tr>";
                     echo"</tr>";

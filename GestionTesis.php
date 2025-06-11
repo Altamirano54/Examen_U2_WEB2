@@ -35,8 +35,8 @@
                     echo "<td>". $fila['Fecha_fin']. "</td>";
                     echo "<td>". $fila['Apellido']." ".$fila['Nombre'] . "</td>";
                     echo "<td>
-                            <a href='GestionTesista/editar.php?id={$fila['id']}'>Editar</a>
-                            <a href='eliminar.php?id={$fila['id']}'>Eliminar</a>
+                            <a href='GestionTesis/editar.php?id={$fila['id']}'>Editar</a>
+                            <a href='GestionTesis/eliminar.php?id={$fila['id']}'>Eliminar</a>
                           </td>";
                     echo "</tr>";
                     echo"</tr>";
