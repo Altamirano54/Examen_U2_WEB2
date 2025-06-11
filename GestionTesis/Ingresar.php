@@ -13,11 +13,24 @@
     <input name="Resumen" placeholder="Resumen"><br>
     <input name="objetivos" placeholder="objetivos"><br>
     <label for="Tesista">Tesista:</label><br>
-    <select name="Escuela_Profecional" id="Escuela_Profecional" inputmode="$_POST">
+    <select name="Tesista" id="Tesista" inputmode="$_POST">
             <option value="">Selecciona una opción</option>
-            <option namme="Escuela_Profecional" value="Ing. Sistemas">Ing. Sistemas</option>
-            <option namme="Escuela_Profecional" value="Ing. Mecanica Electrica">Ing. Mecanica Electrica</option>
-            <option namme="Escuela_Profecional" value="Ing. Mecatronica">Ing. Mecatronica</option>
+            <?php
+            require_once "Conexion.php";
+            $sql = "SELECT * FROM  Tesista AS te  WHERE te.estado = 1 ORDER BY te.Apellido";
+            $objConexion = new Conexion();
+            $con = $objConexion->getConexion();
+            $resultado = $con->query($sql);
+            if($resultado->num_rows > 0){
+                while($fila = $resultado->fetch_assoc()){
+                    echo "<option namme='tesista' value='". $fila['id']."'". ">".$fila['Apellido']. " ". $fila['Nombre']."</option>";
+
+                }
+            } else {
+                echo "<tr><td colspan='4'>No hay resultados</td></tr>";
+            }
+            ?>
     </select><br>
+    
     <input type="submit" value="Guardar">
 </form>

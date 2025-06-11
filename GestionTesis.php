@@ -48,6 +48,6 @@
         </tbody>
     </table>
 
-    <a href="GestionTesista/Ingresar.php">registrar nuevo tesita</a>
+    <a href="GestionTesis/Ingresar.php">registrar nuevo tesis</a>
 </body>
 </html>

@@ -41,5 +41,6 @@
     </table>
 
     <a href="GestionTesista.php"> Gestionar Tesistas</a>
+    <a href="GestionTesis.php"> Gestionar Tesis</a>
 </body>
 </html>
